@@ -1,6 +1,6 @@
 {
   "name": "@feryardiant/read-changelog",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Fetch latest release note from CHANGELOG.md file",
   "repository": "github:feryardiant/read-changelog",
   "author": "Fery Wardiyanto <ferywardiyanto@gmail.com>",
@@ -14,17 +14,17 @@
     "read-changelog": "./cli.js"
   },
   "scripts": {
-      "release": "standard-version -s"
+    "release": "standard-version -s"
   },
   "devDependencies": {
-      "@commitlint/cli": "^8.3.5",
-      "@commitlint/config-conventional": "^8.3.4",
-      "standard-version": "^8.0.0"
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "standard-version": "^8.0.0"
   },
   "commitlint": {
-      "extends": [
-          "@commitlint/config-conventional"
-      ]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "standard-version": {}
 }
