@@ -13,6 +13,10 @@
   "bin": {
     "read-changelog": "./cli.js"
   },
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
   "scripts": {
     "release": "standard-version -s"
   },
