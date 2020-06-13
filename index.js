@@ -15,8 +15,11 @@ module.exports = async (changelog) => {
       return { index, line, compare: match ? match.groups.link : null }
   })
 
-  console.info(changes.slice(curr.index + 1, prev.index).join('\n').trim())
-  console.info('\n---\n')
-  console.info('Compare with previous version:', curr.compare)
+  console.info(changes.slice(curr.index + 1, prev ? prev.index : undefined).join('\n').trim())
+
+  if (undefined !== prev) {
+    console.info('\n---\n')
+    console.info('Compare with previous version:', curr.compare)
+  }
 }
 
