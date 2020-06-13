@@ -11,7 +11,9 @@ process.on('unhandledRejection', (err) => {
 try {
   const changelogFile = readFileSync(resolve(process.cwd(), 'CHANGELOG.md'))
 
-  require('./index')(changelogFile.toString())
+  require('./index')(changelogFile.toString()).catch(err => {
+    throw err
+  })
 } catch (e) {
   if (e.code === 'ENOENT') {
     console.error('Error: Could not find CHANGELOG.md file in', process.cwd())
