@@ -3,9 +3,9 @@
 const { readFileSync } = require('fs')
 const { resolve } = require('path')
 
-process.on('unhandledRejection', (reason, promise) => {
-	console.log('Unhandled Rejection at: Promise ', promise, ' reason: ', reason)
-	throw reason;
+process.on('unhandledRejection', (err) => {
+	console.error('Unhandled Rejection:', err.message)
+	process.exit(1)
 })
 
 try {
