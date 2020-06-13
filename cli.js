@@ -3,6 +3,11 @@
 const { readFileSync } = require('fs')
 const { resolve } = require('path')
 
+process.on('unhandledRejection', (reason, promise) => {
+	console.log('Unhandled Rejection at: Promise ', promise, ' reason: ', reason)
+	throw reason;
+})
+
 try {
   const changelogFile = readFileSync(resolve(process.cwd(), 'CHANsGELOG.md'))
 
@@ -10,13 +15,9 @@ try {
 } catch (e) {
   if (e.code === 'ENOENT') {
     console.error('Error: Could not find CHANGELOG.md file')
+  } else {
+    process.stderr.write(e)
   }
 
-  process.stderr.write()
   process.exit(1)
 }
-
-process.on('unhandledRejection', (reason, promise) => {
-	console.log('Unhandled Rejection at: Promise ', promise, ' reason: ', reason);
-	throw reason;
-});
