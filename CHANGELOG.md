@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/feryardiant/read-changelog/compare/v0.1.11...v0.1.12) (2021-03-09)
+
+
+### Features
+
+* add support for @commitlint/cli >= 10 ([e219248](https://github.com/feryardiant/read-changelog/commit/e21924851511986f5045881542bf870ef73c5de9))
+* add workflow to publish github release ([7285528](https://github.com/feryardiant/read-changelog/commit/7285528179b71a3668195023842b24a1a843968d))
+
 ### [0.1.11](https://github.com/feryardiant/read-changelog/compare/v0.1.10...v0.1.11) (2021-03-09)
 
 ### [0.1.10](https://github.com/feryardiant/read-changelog/compare/v0.1.9...v0.1.10) (2021-03-07)
